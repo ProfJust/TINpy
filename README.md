@@ -1,4 +1,3 @@
-# TIN
-Software-Projekte zur Vorlesung Technische Informatik (C/C++ mit MS-Visual Studio und Qt)
-
-Jetzt auch die ersten Programme
+# TINpy
+Python Skripte zur Vorlesung Technische Informatik in  Python (TINpy) von Prof. O. Just  an der Westfälischen Hochschule am Campus Bocholt
+Bachelorstudiengang "Robotik und Automatisierung"
