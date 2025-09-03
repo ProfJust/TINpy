@@ -1,6 +1,0 @@
-^D:\MYSCIEBO\_TIN_WS20\_TIN_SW_BSP\KAP13_QT_PAINT\05_FIRSTDRAW\05_FIRSTDRAW\_FIRSTDRAW.H
-"D:\Qt\5.15.1\msvc2019_64\bin\moc.exe"  "D:\mySciebo\_TIN_WS20\_TIN_SW_BSP\Kap13_Qt_Paint\05_FirstDraw\05_FirstDraw\_FirstDraw.h" -o ".\GeneratedFiles\Debug\moc__FirstDraw.cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\GeneratedFiles" "-I." "-ID:\Qt\5.15.1\msvc2019_64\include" "-I.\GeneratedFiles\Debug\." "-ID:\Qt\5.15.1\msvc2019_64\include\QtCore" "-ID:\Qt\5.15.1\msvc2019_64\include\QtGui" "-ID:\Qt\5.15.1\msvc2019_64\include\QtWidgets"
-^D:\MYSCIEBO\_TIN_WS20\_TIN_SW_BSP\KAP13_QT_PAINT\05_FIRSTDRAW\05_FIRSTDRAW\_FIRSTDRAW.UI
-"D:\Qt\5.15.1\msvc2019_64\bin\uic.exe" -o ".\GeneratedFiles\ui__FirstDraw.h" "D:\mySciebo\_TIN_WS20\_TIN_SW_BSP\Kap13_Qt_Paint\05_FirstDraw\05_FirstDraw\_FirstDraw.ui"
-^D:\MYSCIEBO\_TIN_WS20\_TIN_SW_BSP\KAP13_QT_PAINT\05_FIRSTDRAW\05_FIRSTDRAW\_FIRSTDRAW.QRC
-"D:\Qt\5.15.1\msvc2019_64\bin\rcc.exe" -name "_FirstDraw" -no-compress "D:\mySciebo\_TIN_WS20\_TIN_SW_BSP\Kap13_Qt_Paint\05_FirstDraw\05_FirstDraw\_FirstDraw.qrc" -o .\GeneratedFiles\qrc__FirstDraw.cpp

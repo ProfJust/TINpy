@@ -1,6 +1,0 @@
-^D:\MYSCIEBO\_TIN_WS19\_TIN_SW_BSP\KAP14_QT_PAINT\07_FIRSTDRAW BEWEGUNG TIMER BTN\05_FIRSTDRAW\_FIRSTMOVE.H
-"D:\Qt\5.12.5\msvc2017_64\bin\moc.exe"  "D:\mySciebo\_TIN_WS19\_TIN_SW_BSP\Kap14_Qt_Paint\07_FirstDraw Bewegung Timer Btn\05_FirstDraw\_FirstMove.h" -o ".\GeneratedFiles\Debug\moc__FirstMove.cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\GeneratedFiles" "-I." "-ID:\Qt\5.12.5\msvc2017_64\include" "-I.\GeneratedFiles\Debug\." "-ID:\Qt\5.12.5\msvc2017_64\include\QtCore" "-ID:\Qt\5.12.5\msvc2017_64\include\QtGui" "-ID:\Qt\5.12.5\msvc2017_64\include\QtWidgets"
-^D:\MYSCIEBO\_TIN_WS19\_TIN_SW_BSP\KAP14_QT_PAINT\07_FIRSTDRAW BEWEGUNG TIMER BTN\05_FIRSTDRAW\_FIRSTDRAWEUI
-"D:\Qt\5.12.5\msvc2017_64\bin\uic.exe" -o ".\GeneratedFiles\ui__FirstDrawEui.h" "D:\mySciebo\_TIN_WS19\_TIN_SW_BSP\Kap14_Qt_Paint\07_FirstDraw Bewegung Timer Btn\05_FirstDraw\_FirstDrawEui"
-^D:\MYSCIEBO\_TIN_WS19\_TIN_SW_BSP\KAP14_QT_PAINT\07_FIRSTDRAW BEWEGUNG TIMER BTN\05_FIRSTDRAW\_FIRSTDRAW.QRC
-"D:\Qt\5.12.5\msvc2017_64\bin\rcc.exe" -name "_FirstDraw" -no-compress "D:\mySciebo\_TIN_WS19\_TIN_SW_BSP\Kap14_Qt_Paint\07_FirstDraw Bewegung Timer Btn\05_FirstDraw\_FirstDraw.qrc" -o .\GeneratedFiles\qrc__FirstDraw.cpp

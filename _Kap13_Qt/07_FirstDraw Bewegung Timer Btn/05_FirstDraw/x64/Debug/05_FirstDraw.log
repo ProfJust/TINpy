@@ -1,3 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (05_FirstDraw.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  _FirstMove.cpp
-  05_FirstDraw.vcxproj -> D:\mySciebo\_TIN_WS19\_TIN_SW_BSP\Kap14_Qt_Paint\07_FirstDraw Bewegung Timer Btn\x64\Debug\06_FirstMove.exe

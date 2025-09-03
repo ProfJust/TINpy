@@ -1,6 +1,0 @@
-^D:\MYSCIEBO\_TIN_WS20\_TIN_SW_BSP\KAP16_QT - SPIEL MIT BEWEGUNG\SW16_07_KEYPRESS - KLASSE FÜR HINDERNISSE\KEYPRESS\KEYPRESS.H
-"D:\Qt\5.15.1\msvc2019_64\bin\moc.exe"  "D:\mySciebo\_TIN_WS20\_TIN_SW_BSP\Kap16_Qt - Spiel mit Bewegung\sw16_07_KeyPress - Klasse für Hindernisse\KeyPress\KeyPress.h" -o ".\GeneratedFiles\Debug\moc_KeyPress.cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-ID:\Qt\5.15.1\msvc2019_64\include" "-I.\GeneratedFiles\Debug\." "-ID:\Qt\5.15.1\msvc2019_64\include\QtCore" "-ID:\Qt\5.15.1\msvc2019_64\include\QtGui" "-ID:\Qt\5.15.1\msvc2019_64\include\QtWidgets"
-^D:\MYSCIEBO\_TIN_WS20\_TIN_SW_BSP\KAP16_QT - SPIEL MIT BEWEGUNG\SW16_07_KEYPRESS - KLASSE FÜR HINDERNISSE\KEYPRESS\KEYPRESS.UI
-"D:\Qt\5.15.1\msvc2019_64\bin\uic.exe" -o ".\GeneratedFiles\ui_KeyPress.h" "D:\mySciebo\_TIN_WS20\_TIN_SW_BSP\Kap16_Qt - Spiel mit Bewegung\sw16_07_KeyPress - Klasse für Hindernisse\KeyPress\KeyPress.ui"
-^D:\MYSCIEBO\_TIN_WS20\_TIN_SW_BSP\KAP16_QT - SPIEL MIT BEWEGUNG\SW16_07_KEYPRESS - KLASSE FÜR HINDERNISSE\KEYPRESS\KEYPRESS.QRC
-"D:\Qt\5.15.1\msvc2019_64\bin\rcc.exe" -name "KeyPress" -no-compress "D:\mySciebo\_TIN_WS20\_TIN_SW_BSP\Kap16_Qt - Spiel mit Bewegung\sw16_07_KeyPress - Klasse für Hindernisse\KeyPress\KeyPress.qrc" -o .\GeneratedFiles\qrc_KeyPress.cpp
