@@ -3,7 +3,7 @@
 # Erstellt ein erstes Fenster mit PyQt6
 # -----------------------------------------
 # OJ am 29.09.2025
-# ggf. notwendig  >pip install PyQt6  bzw. >python -m pip install PyQt6
+# ggf. notwendig  >pip install PyQt6
 
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel
 
