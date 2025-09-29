@@ -1,64 +1,86 @@
-#!/usr/bin/env python3
-# ---------------------------------------------------------------------
-# pyqt_sw07_LCD_Slider.py
-# Beispiel fuer Signal Slot Konzept
-# ---------------------------------------------------------------------
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
 
-from PyQt6.QtWidgets import (QWidget, QSlider,
-                             QLCDNumber, QApplication, QPushButton)
-from PyQt6.QtCore import Qt
 import sys
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import (QWidget, QLCDNumber, QSlider,
+                             QPushButton, QVBoxLayout,
+                             QHBoxLayout, QApplication, QLabel)
+
+class myButton(QPushButton):
+
+    # Konstruktor
+    # benötigt Zugriff auf str '<' oder '>', Label und Slider
+    def __init__(self, str, lbl, slider):
+        super(myButton,self).__init__()
+        self.setText(str)
+        self.label = lbl
+        self.sld = slider
+##> "this" bzw. self muss in Python immer explixit angegeben
+##> werden, anders als z.B. bei C++.
+## Das ist einer der Python-Grundsätze:
+## "Explicit is better than implicit",
 
 
-class MainWindow(QWidget):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
-        # --- Slider erstellen -----
-        self.mySlider = QSlider(Qt.Orientation.Horizontal, self)
-        self.mySlider.setFocusPolicy(Qt.FocusPolicy.NoFocus)
-        self.mySlider.setGeometry(30, 40, 180, 30)  # x,y,w,h
-        self.mySlider.setValue(20)
+    # zusaetzliche Fkt von myButton zu QPushButton
+    def SlotKlick(self):
+        sender = self.sender()
+        wert = self.sld.value()
+        if sender.text()=='<':
+            self.label.setText('less')
+            wert = wert-1
+        else:
+            self.label.setText('more')
+            wert = wert+1            
+        self.sld.setValue(wert)
 
-        # --- LCD konstruieren -----
-        self.myLcd = QLCDNumber(2, self)
-        self.myLcd.setGeometry(60, 100, 80, 50)  # x,y,w,h
-        self.myLcd.display(20)
+class Example(QWidget):
+    
+    def __init__(self): #Konstrukor
+        #Konstruktor der Elternklasse aufrufen
+        super(Example, self).__init__()      
+        self.initUI()
+                
+    def initUI(self):
+        #Instanziierung der Widgets       
+        lcd = QLCDNumber(self)
+        self.sld = QSlider(Qt.Orientation.Horizontal, self)
+        self.lblStatus = QLabel('Statuszeile')
+        
+        ##        pbLess = QPushButton('<')
+        ##        pbMore = QPushButton('>')
+        self.pbLess = myButton('<',self.lblStatus, self.sld )
+        self.pbMore = myButton('>',self.lblStatus, self.sld )            
 
-        # Verbinden des Signals valueChanged
-        # mit der Slot-Funktion myLcd.display
-        self.mySlider.valueChanged[int].connect(self.myLcd.display)
 
-        # --- zwei PushButtons
-        self.myPBmore = QPushButton(self)
-        self.myPBmore.setText('>')
-        self.myPBmore.setGeometry(0, 0, 40, 40)   # x,y,w,h
-        self.myPBmore.clicked.connect(self.plus)
-
-        self.myPBless = QPushButton(self)
-        self.myPBless.setText('<')
-        self.myPBless.setGeometry(180, 0, 40, 40)  # x,y,w,h
-        self.myPBless.clicked.connect(self.minus)
-
-        # --- Window konfigurieren
-        self.setGeometry(300, 300, 280, 170)
-        self.setWindowTitle('PyQt6 - Slider LCD')
+        #BOX-Layout mit Widgets füllen
+        vbox = QVBoxLayout()
+        #1.Reihe        
+        vbox.addWidget(lcd)
+        #2.Reihe
+        vbox.addWidget(self.sld)
+        #3.Reihe
+        hbox = QHBoxLayout()
+        hbox.addWidget(self.pbLess)
+        hbox.addWidget(self.pbMore)
+        vbox.addLayout(hbox)
+        #4.Reihe
+        vbox.addWidget(self.lblStatus)
+        #Alle Boxen ins Window setzen        
+        self.setLayout(vbox)           
+        
+        #Signal und Slot verbinden
+        self.sld.valueChanged.connect(lcd.display)
+        self.sld.valueChanged.connect(lcd.display)
+        
+        self.pbLess.clicked.connect(self.pbLess.SlotKlick)
+        self.pbMore.clicked.connect(self.pbMore.SlotKlick)
+        
+        #Fenster Konfigurieren
+        self.setGeometry(300, 300, 250, 150)
+        self.setWindowTitle('Signal and slot')
         self.show()
 
-    # --- Die beiden Slot-Methoden
-    def plus(self):
-        wert = self.mySlider.value()  # Slider Wert holen
-        wert = wert+1
-        self.mySlider.setValue(wert)  # Slider Wert setzen
-
-    def minus(self):
-        wert = self.mySlider.value()
-        wert = wert-1
-        self.mySlider.setValue(wert)
-
-
-if __name__ == '__main__':
-
+if __name__ == '__main__':    
     app = QApplication(sys.argv)
-    mw = MainWindow()
+    ex = Example()
     sys.exit(app.exec())
