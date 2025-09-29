@@ -1,12 +1,11 @@
-from PyQt6.QtWidgets import (QWidget, QApplication, QPushButton, QVBoxLayout, QHBoxLayout)  # Add VBoxLayout
-from PyQt6.QtCore import Qt
-
+from PyQt6.QtWidgets import (QWidget, QApplication, QPushButton, 
+                             QVBoxLayout, QHBoxLayout)  # Add VBoxLayout
 import sys
 
 
 class MainWindow(QWidget):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
+    def __init__(self):
+        super().__init__()
         Button1 = QPushButton('PyQt')
         Button2 = QPushButton('Layout')
         Button3 = QPushButton('Management')
@@ -20,7 +19,6 @@ class MainWindow(QWidget):
         hbox.addWidget(Button3)
         hbox.addWidget(Button4)
         vbox.addLayout(hbox)  # ADD LAYOUT
- 
         self.setLayout(vbox)
         self.setGeometry(300, 300, 250, 150)
         self.setWindowTitle('PyQt5 Layout')
@@ -32,5 +30,3 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     mw = MainWindow()
     sys.exit(app.exec())
- 
-

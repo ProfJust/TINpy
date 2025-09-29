@@ -11,7 +11,8 @@ class myButton(QPushButton):
     # Konstruktor
     # benötigt Zugriff auf str '<' oder '>', Label und Slider
     def __init__(self, str, lbl, slider):
-        super(myButton,self).__init__()
+        # super(myButton,self).__init__()
+        super().__init__()
         self.setText(str)
         self.label = lbl
         self.sld = slider
@@ -44,6 +45,9 @@ class Example(QWidget):
         #Instanziierung der Widgets       
         lcd = QLCDNumber(self)
         self.sld = QSlider(Qt.Orientation.Horizontal, self)
+        # Setzt den Wertebereich des Sliders, damit Überläufe bei plus/minus verhindert werden
+        self.sld.setMinimum(0)
+        self.sld.setMaximum(99)
         self.lblStatus = QLabel('Statuszeile')
         
         ##        pbLess = QPushButton('<')
@@ -70,8 +74,7 @@ class Example(QWidget):
         
         #Signal und Slot verbinden
         self.sld.valueChanged.connect(lcd.display)
-        self.sld.valueChanged.connect(lcd.display)
-        
+              
         self.pbLess.clicked.connect(self.pbLess.SlotKlick)
         self.pbMore.clicked.connect(self.pbMore.SlotKlick)
         
