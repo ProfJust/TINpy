@@ -1,5 +1,5 @@
 # Hier ist ein einfaches Hello-World-Programm in Python:
 
-# ```python
-print("Hello, World!")
+# ```python 
+print("Hello, TINpy World!")
 # ```
