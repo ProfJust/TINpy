@@ -4,6 +4,11 @@
 # -----------------------------------------
 # OJ am 29.09.2025
 # ggf. notwendig  >pip install PyQt6
+# ERROR: Activate.ps1" kann nicht geladen werden,
+#  da die Ausführung von Skripts auf diesem System deaktiviert ist. 
+# ==>>
+# Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel
 
