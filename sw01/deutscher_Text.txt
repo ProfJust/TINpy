@@ -1,0 +1,11 @@
+Um zu überprüfen, wie viele Wörter ein »e« enthalten, brauchen wir zunächst
+eine Wortliste. Wir verwenden eine Liste aus etwa 114.000 offiziellen Kreuz-
+worträtseln. Es handelt sich also um Wörter, die in Kreuzworträtseln und an-
+deren Wortspielen als gültig angesehen werden.
+Die Wortliste befindet sich in einer Datei namens words.txt, die im Notebook
+zu diesem Kapitel heruntergeladen werden kann. Um sie einzulesen, verwen-
+den wir die eingebaute Funktion open. Sie übernimmt den Namen der Datei als
+Parameter und gibt ein Dateiobjekt (engl. File Object) zurück, das wir verwen-
+den können, um die Datei einzulesen:
+eeeeeeeeeeeeeeeeeee
+zufziguohpjjjjjjjjjjjjjj
