@@ -15,12 +15,12 @@ print("Durchschnitt", liste_durchschnitt)
 Liste_temp.append([22.9, 23.5, 22.3,24.1, 23.3])
 print(Liste_temp)
 
-hoechste_temp_ever = -1
+hoechste_temp_ever =  float('-inf')  # größter negativer Wert 
 ht_index_sensor =    -1
 ht_index_zeit = -1
 for zeit_index, liste_zeile in enumerate(Liste_temp):  # Äußere Schleife
     # print(zeit_index, liste_zeile )
-    for sensor_index, wert in enumerate(liste_zeile):
+    for sensor_index, wert in enumerate(liste_zeile):  # Innere Schleife
         # print(sensor_index,wert)
         if wert > hoechste_temp_ever:
             hoechste_temp_ever = wert
