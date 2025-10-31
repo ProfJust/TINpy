@@ -1,5 +1,3 @@
-import math
-
 class Vektor:
     def __init__(self, name="no name", a=0.0, b=0.0, c=0.0):
         self.werte = [a, b, c]
