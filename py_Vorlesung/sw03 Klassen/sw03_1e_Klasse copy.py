@@ -39,7 +39,7 @@ def increment_time2(time, hours, minutes, seconds):
     # also ganzzahligen Quotienten und Rest in einem Aufruf.
     rest, time.second = divmod(time.second, 60)
     rest, time.minute = divmod(time.minute + rest, 60)
-    rest, time.hour   = divmod(time.hour + rest , 60)
+    rest, time.hour   = divmod(time.hour + rest , 24)
 
 def add_time(time, hours, minutes, seconds):
     total = copy(time) # Kopie von time anfertigen
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     end = add_time(start, 1, 32, 0)
     print_time(end)
 
-    end2 = add_time(start, 1, 52, 0)
+    end2 = add_time(start, 24, 52, 0)
     print_time(end2)
     
    

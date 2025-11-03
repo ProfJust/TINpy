@@ -59,25 +59,33 @@ class Time:
         print(other)
         print("time, other", self.time_to_int(), other.time_to_int())
         return self.time_to_int() > other.time_to_int()
+    
+    def __str__(self):
+        s = f'{self.hour:02d}:{self.minute:02d}:{self.second:02d}'
+        return s
+    
+    def __add__(self, other):
+        seconds = self.time_to_int() + other.time_to_int()
+        return Time.int_to_time(seconds)
+    
+    def is_valid(self):
+        if self.hour < 0 or self.minute < 0 or self.second < 0:
+            return False
+        if self.minute >= 60 or self.second >= 60:
+            return False
+        if not isinstance(self.hour, int):
+            return False
+        if not isinstance(self.minute, int):
+            return False
+        return True
 
 #--------------------------------------------------------------------
 if __name__ == '__main__':
     start = Time(9, 20, 0)    
-    start.print_time()
-    print(" Sekunden seit 0:0:0 Uhr", start.time_to_int())
-
-    end = Time(10, 12, 00)
-    end.print_time()
-    print(" Sekunden seit 0:0:0 Uhr", end.time_to_int())
-
-    # WIESO KOMMEN HIER DIE SELBEN SEKUNDEN HERAUS????
-    print("Zeitvergleich: ", end.is_after(start))
-
-    # print("Zeitvergleich: ", start.is_after(end))
-    my_obj = end.int_to_time(234)
-    print(my_obj.print_time)
-
     
-   
+    dauer = Time(-9, 20, -20)
+    print(dauer.is_valid())
+    ende = start + dauer
 
-   
+    einstring = str(ende)
+    print("ende", einstring)
