@@ -6,11 +6,12 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 
-with open("ingenieurlied.txt", "r") as f:
+with open("ingenieurlied.txt", "r", encoding="utf-8") as f:
     inhalt = f.read()  # gesamten Inhalt lesen
     print(inhalt)
 
-with open("ingenieurlied.txt", "r") as f:
-    zeilen_liste = f.readlines()  # gesamten Inhalt lesen
-    print(zeilen_liste)
+
+with open("output.txt", "w") as f:
+    f.write("Hallo Welt!\n")
+
 

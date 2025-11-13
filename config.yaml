@@ -1,0 +1,6 @@
+data_dir: photo_info
+extensions:
+- jpg
+- jpeg
+photo_dir: photos
+value: 5.4
