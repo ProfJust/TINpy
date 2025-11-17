@@ -29,7 +29,7 @@ class MainWindow(QMainWindow): # Leitet eine benutzerdefinierte Fensterklasse Ma
         # verknüpft das „clicked“-Signal des Buttons mit dem Slot clickSlot.
         # Wird der Button geklickt, wird clickMethod ausgeführt.
         pybutton.clicked.connect(self.clickSlot)
-
+        
         # Der Button wird auf die Größe 100x32 Pixel gesetzt 
         pybutton.resize(100,32)
         # ..und bei x=50, y=50 im Fenster positioniert.
