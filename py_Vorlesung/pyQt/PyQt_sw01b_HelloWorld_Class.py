@@ -20,9 +20,9 @@ class HelloWindow(QMainWindow):
         gridLayout = QGridLayout(self)     
         centralWidget.setLayout(gridLayout)  
 
-        title = QLabel("Hello World from PyQt6", self)
-        title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        gridLayout.addWidget(title, 0, 0)
+        label = QLabel("Hello World from PyQt6", self)
+        label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        gridLayout.addWidget(label, 0, 0)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

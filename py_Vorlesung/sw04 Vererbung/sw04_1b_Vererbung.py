@@ -22,10 +22,8 @@ class Roboterarm(Roboter):  # <=== Elternteil in ()
 
 #--------------------------------------------------------------------
 if __name__ == '__main__':
-    robo = Roboter('youBot', 'Kuka')
-    print(robo.starte())
-    print(robo.stoppe())
-
+    
     roboArm = Roboterarm('Ur3e', 'Universal Robot', 3)
+    print(roboArm.starte())
     print(roboArm.hebe_last())
 
