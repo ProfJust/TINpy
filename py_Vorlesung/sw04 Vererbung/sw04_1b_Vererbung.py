@@ -23,7 +23,7 @@ class Roboterarm(Roboter):  # <=== Elternteil in ()
 #--------------------------------------------------------------------
 if __name__ == '__main__':
     
-    roboArm = Roboterarm('Ur3e', 'Universal Robot', 3)
+    roboArm = Roboterarm('IRB 1200-5', 'ABB', 5)
     print(roboArm.starte())
     print(roboArm.hebe_last())
 

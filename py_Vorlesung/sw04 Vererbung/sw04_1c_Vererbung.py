@@ -35,7 +35,7 @@ if __name__ == '__main__':
     print(robo.starte())
     print(robo.stoppe())
 
-    roboArm = Roboterarm('Ur3e', 'Universal Robot', 3)
+    roboArm = Roboterarm('IRB 1200-5', 'ABB', 5)
     print(roboArm.hebe_last())
 
     fts = Fts('T300', 'Pudu',['Transport','Navigation'])
