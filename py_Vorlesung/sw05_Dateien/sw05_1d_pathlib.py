@@ -6,19 +6,18 @@ script_dir = Path(__file__).resolve().parent
 dateipfad = script_dir / "ingenieurlied.txt"
 print(dateipfad)
 text = dateipfad.read_text(encoding="utf-8")
-# print(text)
+print(text)
 
 p = script_dir / "log.txt"
 text = p.read_text()
 print(text)
-p.write
+p.write_text("Neuer Text im Logfile.\n")    
 
-
-
-
-
-# p = Path("texte", "ingenieurslied.txt")
-# if p.exists():
-#     text = p.read_text(encoding="utf-8")
-# else:
-#     print(f"Pfad {p} nicht gefunden")
+# globale Suche nach Dateien => GREAT !!
+for f in Path(".").glob("config.yaml"):
+    print(f)
+    if f.exists():
+        text = f.read_text(encoding="utf-8")
+        print(text)
+    else:
+        print(f"Pfad {f} nicht gefunden")
