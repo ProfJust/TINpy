@@ -89,13 +89,12 @@ class StudiListe():
         for [weight, size, bmi] in self.data:
             # Werte (values) können z.B. ['Gewicht','Größe','BMI'] (Header) oder [weight, size, bmi] sein
             try:
-                bmi = float(bmi)
+                bmi = float(bmi) # statt eval
                 summe += bmi
             except (ValueError, TypeError):
                     # Nicht-numerischer Eintrag (z.B. Header) überspringen
                     pass
             index += 1
-
         ergebnis = summe / (index-1)
         return ergebnis
 
