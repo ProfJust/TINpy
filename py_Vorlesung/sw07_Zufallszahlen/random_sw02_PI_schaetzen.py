@@ -1,6 +1,6 @@
 import random
 
-def monte_carlo_pi(samples=100000):
+def monte_carlo_pi(samples=1000000):
     inside = 0
     for _ in range(samples):
         # random.random() erzeugt eine Zufallszahl in [0, 1].

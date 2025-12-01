@@ -1,5 +1,5 @@
 import random
-random.seed(42) # bestimmt den Startpunkt in der Zufallszahlenliste
+# random.seed(42) # bestimmt den Startpunkt in der Zufallszahlenliste
 # => reproduzierbar die gleiche Folge von Zufallszahlen
 
 print(random.random())       # 0.374448... 
