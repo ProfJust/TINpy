@@ -32,6 +32,7 @@ def main():
             query = "INSERT INTO tbl_temp (temp_value) VALUE(42.9)" 
             cur.execute(query)
             print(f"{cur.rowcount} Datensatz hinzugefügt.")
+            
 
             query = "SELECT * from tbl_temp" 
             cur.execute(query)
