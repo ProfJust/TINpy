@@ -2,7 +2,6 @@ import os
 import mysql.connector
 from mysql.connector import Error
 
-
 def get_connection():
     return mysql.connector.connect(
         host=os.getenv("DB_HOST", "127.0.0.1"),
@@ -12,11 +11,9 @@ def get_connection():
         database="db_tinpy",
     )
 
-
 def main():
     cnx = None
     cur = None
-
     try:
         cnx = get_connection()
         print("Verbindung zur Datenbank aufgebaut.")
