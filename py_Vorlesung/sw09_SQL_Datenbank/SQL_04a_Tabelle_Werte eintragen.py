@@ -20,7 +20,7 @@ def main():
         cur = cnx.cursor()
 
         # 1) EINTRAG HINZUFÜGEN
-        insert_sql = "INSERT INTO tbl_temp (temp_value) VALUES (%s)"
+        insert_sql = "INSERT INTO tbl_temp3 (temp_value) VALUES (%s)"
         temp = 42.9  # Python-float; passt direkt zum FLOAT-Feld[web:72][web:58]
 
         cur.execute(insert_sql, (temp,))
@@ -29,7 +29,7 @@ def main():
         print("1 Datensatz hinzugefügt, ID:", cur.lastrowid)
 
         # 2) ALLE DATEN LESEN (Resultset komplett abholen!)
-        select_sql = "SELECT temp_id, temp_value FROM tbl_temp"
+        select_sql = "SELECT temp_id, temp_value FROM tbl_temp3"
         cur.execute(select_sql)
         rows = cur.fetchall()   # wichtig: alles lesen, sonst "Unread result found"[web:52][web:55]
 

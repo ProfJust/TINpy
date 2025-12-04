@@ -29,7 +29,7 @@ def main():
         print("Verbindung zur Datenbank aufgebaut.")
 
         with cnx.cursor() as cur: # Create a cursor object
-            query = "INSERT INTO tbl_temp (temp_value) VALUE(42.9)" 
+            query = "INSERT INTO tbl_temp3 (temp_value) VALUE(42.9)" 
             cur.execute(query)
             print(f"{cur.rowcount} Datensatz hinzugefügt.")
             

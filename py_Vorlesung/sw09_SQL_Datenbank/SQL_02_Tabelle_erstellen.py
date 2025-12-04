@@ -29,8 +29,8 @@ def main():
         print("Verbindung zur Datenbank aufgebaut.")
 
         with cnx.cursor() as cur: # Create a cursor object
-            query="CREATE TABLE tbl_temp (name VARCHAR(255), roll INT(10), class INT(10))" #query to create a table
-            print("Query to create table:", query ) 
+            #query="CREATE TABLE tbl_temp2 (name VARCHAR(255), roll INT(10), class INT(10))" #query to create a table
+            query="CREATE TABLE tbl_temp3 (temp_id INT UNSIGNED NOT NULL AUTO_INCREMENT, temp_value FLOAT DEFAULT 0.00, PRIMARY KEY (temp_id))"
             cur.execute(query) #executing the query   
 
     except Error as e: # Fehlerbehandlung
