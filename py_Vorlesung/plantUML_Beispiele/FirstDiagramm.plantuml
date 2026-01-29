@@ -1,5 +1,6 @@
-@startuml
+@startuml   FirstDiagramm
 Alice -> Bob: Hello
 @enduml
 
-' use ALT + D to show diagramm
+' Set Cursor between @startuml and @enduml
+' and use ALT + D to show diagramm
