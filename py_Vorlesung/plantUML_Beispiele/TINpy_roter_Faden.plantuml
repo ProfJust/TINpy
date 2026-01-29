@@ -1,0 +1,4 @@
+@startuml Diagram0
+Alice -> Bob: Hello World
+@enduml
+

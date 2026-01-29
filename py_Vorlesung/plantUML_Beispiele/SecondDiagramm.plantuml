@@ -1,0 +1,19 @@
+@startuml Diagram0
+skinparam style strictuml
+skinparam SequenceMessageAlignment center
+A -> B: Hello World
+A <- B: Hi
+@enduml
+
+' use ALT + D to show diagramm
+' use RMB to  export current diagramm => Ordner Tinpy/out
+' use RMB to generate URL  => No PlantUML server, specify one with "plantuml.server".
+' Kurzes Erklärvideo
+' https://www.youtube.com/watch?v=xkwJ9GwgZJU
+
+' PlantUML direkt aus dem Code estellen: 
+' pip install pylint
+' pyreverse -o plantuml -p MeinProjekt pfad/zum/package
+' z.B. cd C:\sciebo_robotik\_TINpy\TINpy_git\TINpy\py_Uebung\ue04_Vektor_Klasse
+' pyreverse -o plantuml -p Klasse_Vector Klasse_Vector.py
+' ==> File classes_Klasse_Vector.plantuml wird erstellt

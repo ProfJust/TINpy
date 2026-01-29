@@ -1,0 +1,12 @@
+@startuml classes_Klasse_Vector
+set namespaceSeparator none
+class "Vektor" as Klasse_Vector.Vektor {
+  name : str
+  werte : list
+  ausgabe()
+  betrag()
+  skalarprodukt(v1, v2)
+  vektoraddition(other)
+  vektorprodukt(other)
+}
+@enduml

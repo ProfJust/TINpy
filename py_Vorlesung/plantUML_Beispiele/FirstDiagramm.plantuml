@@ -1,0 +1,5 @@
+@startuml
+Alice -> Bob: Hello
+@enduml
+
+' use ALT + D to show diagramm
