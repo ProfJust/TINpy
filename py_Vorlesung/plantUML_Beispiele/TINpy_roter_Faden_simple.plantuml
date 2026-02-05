@@ -1,0 +1,40 @@
+@startmindmap TINpy 
+title **Python programmieren für Ingenieure/-innen**
+*[#blue] <color:white> **Technische Informatik** </color>
+
+**[#orange]: **Eingabe, Verarbeitung Ausgabe**
+EVA-Prinzip, Konsolen-Ein-/Ausgabe, Dateiein-/ausgabe;
+
+**[#orange]: **Werte verabeiten **
+Zahlen, Zeichen, Boolesche Werte, 
+Variablen und Datentypen;
+
+**[#orange]: **Funktionen & Abläufe**
+if, else und Funktionen, return;
+
+**[#orange]: **Schleifen und Iterationen**
+for, while, break, continue, Iterieren über Listen;
+
+**[#orange]: **Datenstrukturen**
+Listen, Tupel, Dictionaries, Sets;
+
+**[#orange]: **Klassen & Objekte**
+Objektorientierte Prog., Attribute und Methoden;
+
+**[#orange]: **Algorithmen**
+Sortier- und Suchalgorithmen, Rekursion;
+
+**[#orange]: **Fehlerbehandlung**
+try, except, finally, eigene Fehlerklassen;
+
+**[#orange]: **Robotersimulation mit Webots**
+Steuerung von Robotern, Sensoren und Aktoren;
+
+**[#orange] **Datum & Zeit**
+**[#orange] **Netzwerke und Internet**
+**[#orange] **Sprachsynthese und -erkennung**
+**[#orange] **Computer Vision**
+/'**[#orange] Software Engineering
+**[#orange] PyGame
+'/
+@endmindmap

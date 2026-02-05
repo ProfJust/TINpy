@@ -1,4 +1,111 @@
-@startuml Diagram0
-Alice -> Bob: Hello World
-@enduml
+@startmindmap TINpy
+*[#blue] Technische Informatik
 
+**[#orange] Werte verabeiten
+*** Zahlen speichern
+*** Zahlensysteme (binär, hex)
+*** Boolesche Werte, Algebra
+*** Wertebereiche
+*** Arithmetische Operationen
+*** Logische Operationen
+*** Bit-Operationen
+*** Schieberegister
+*** Masken
+*** Überlauf, Vorzeichen
+
+**[#orange] Funktionen & Abläufe
+*** Steuerung & Ablauf
+*** Funktionen & Prozeduren
+*** Parameterübergabe
+*** Rekursion
+*** Zeitsteuerung
+*** Nebenläufigkeit
+*** Zustandsautomaten
+
+**[#orange] Schleifen und Iterationen
+*** for-Schleifen
+*** while-Schleifen
+*** Schleifensteuerung
+*** Iterationen über Datenstrukturen
+*** Endlosschleifen
+*** Schleifenverschachtelung
+*** Schleifenoptimierung
+*** Iteratoren
+*** Generatoren
+*** List Comprehensions
+*** Rekursive Schleifen
+*** Abbruchbedingungen
+*** Performance-Aspekte
+*** Parallelisierung von Schleifen
+
+**[#orange] Klassen & Objekte
+*** Objektorientierte Programmierung
+*** Klassen und Objekte
+*** Vererbung
+*** Kapselung
+*** Polymorphismus
+*** Konstruktoren und Destruktoren
+*** Methoden
+*** Attribute
+*** Abstrakte Klassen
+*** Schnittstellen
+*** Design Patterns
+*** UML-Diagramme
+*** Ausnahmebehandlung
+
+
+**[#orange] Datenstrukturen
+*** Listen
+*** Queues
+*** Dictionaries
+*** Stapel (Stack)
+*** Warteschlangen
+*** Arrays
+*** Verkettete Listen
+*** Bäume
+*** Graphen
+
+**[#orange] Algorithmen
+*** Suchen
+*** Sortieren
+*** Graphalgorithmen
+*** Komplexität
+*** Effizienz
+
+**[#orange] Simulation mit Webots
+*** Einführung in Webots
+*** Roboterprogrammierung
+*** Sensoren und Aktoren
+*** Simulation von Umgebungen
+*** Steuerungsalgorithmen
+*** Pfadplanung
+*** Kollisionsvermeidung
+
+**[#orange] Datum & Zeitsteuerung
+*** Zeitfunktionen
+*** Timer
+*** Verzögerungen
+*** Echtzeitprogrammierung
+*** Zeitmessung
+*** Zeitstempel
+*** Kalenderfunktionen
+*** Zeitzonen
+*** Zeitbasierte Ereignisse
+*** Scheduling
+*** Zeitformate
+*** Synchronisation
+*** Zeitbibliotheken
+
+**[#orange] Netzwerke und Internet
+
+**[#orange] Sprachsynthese und -erkennung
+
+**[#orange] Computer Vision
+
+**[#orange] Software Engineering
+
+**[#orange] PyGame
+
+
+
+@endmindmap
