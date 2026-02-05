@@ -1,0 +1,44 @@
+@startuml
+title Zustandsdiagramm: follow_line(frog)
+
+[*] --> LinieZentriert
+
+state "LinieZentriert" as LinieZentriert
+state "LinieLinks"      as LinieLinks
+state "LinieRechts"     as LinieRechts
+state "LinieBeidseitig" as LinieBeidseitig
+state "LinieVerloren"   as LinieVerloren
+
+' Übergänge entsprechend der Sensorlogik
+LinieZentriert --> LinieZentriert : c_front == "black"\n/ frog.forward(step)
+
+LinieZentriert --> LinieLinks     : c_front != "black" \n and c_left == "black" \n and c_right != "black"
+LinieZentriert --> LinieRechts    : c_front != "black" \n and c_right == "black" \n and c_left  != "black"
+LinieZentriert --> LinieBeidseitig: c_front != "black" \n and c_left == "black" \n and c_right == "black"
+LinieZentriert --> LinieVerloren  : c_front != "black" \n and c_left != "black" \n and c_right != "black"
+
+LinieLinks --> LinieZentriert     : c_front == "black"\n/ frog.forward(step)
+LinieLinks --> LinieLinks         : c_front != "black" \n and c_left == "black" \n and c_right != "black"\n/ frog.left(turn_soft)\n  frog.forward(step)
+LinieLinks --> LinieRechts        : c_front != "black" \n and c_right == "black" \n and c_left  != "black"
+LinieLinks --> LinieBeidseitig    : c_front != "black" \n and c_left == "black" \n and c_right == "black"
+LinieLinks --> LinieVerloren      : c_front != "black" \n and c_left != "black" \n and c_right != "black"
+
+LinieRechts --> LinieZentriert    : c_front == "black"\n/ frog.forward(step)
+LinieRechts --> LinieRechts       : c_front != "black" \n and c_right == "black" \n and c_left  != "black"\n/ frog.right(turn_soft)\n  frog.forward(step)
+LinieRechts --> LinieLinks        : c_front != "black" \n and c_left == "black" \n and c_right != "black"
+LinieRechts --> LinieBeidseitig   : c_front != "black" \n and c_left == "black" \n and c_right == "black"
+LinieRechts --> LinieVerloren     : c_front != "black" \n and c_left != "black" \n and c_right != "black"
+
+LinieBeidseitig --> LinieBeidseitig : c_left == "black" \n and c_right == "black"\n/ frog.left(turn_hard)\n  frog.forward(step)
+LinieBeidseitig --> LinieZentriert  : c_front == "black"\n/ frog.forward(step)
+LinieBeidseitig --> LinieLinks      : c_front != "black" \n and c_left == "black" \n and c_right != "black"
+LinieBeidseitig --> LinieRechts     : c_front != "black" \n and c_right == "black" \n and c_left  != "black"
+LinieBeidseitig --> LinieVerloren   : c_front != "black" \n and c_left != "black" \n and c_right != "black"
+
+LinieVerloren --> LinieZentriert    : c_front == "black"\n/ frog.forward(step)
+LinieVerloren --> LinieLinks        : c_front != "black" \n and c_left == "black" \n and c_right != "black"
+LinieVerloren --> LinieRechts       : c_front != "black" \n and c_right == "black" \n and c_left  != "black"
+LinieVerloren --> LinieBeidseitig   : c_front != "black" \n and c_left == "black" \n and c_right == "black"
+LinieVerloren --> LinieVerloren     : c_front != "black" \n and c_left != "black" \n and c_right != "black"\n/ frog.left(turn_soft)
+
+@enduml

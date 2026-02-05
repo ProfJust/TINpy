@@ -1,0 +1,28 @@
+@startuml
+title Zustandsdiagramm: follow_line(frog) (vereinfachte Darstellung)
+
+[*] --> LinieZentriert
+
+state "LinieZentriert" as LinieZentriert
+state "LinieLinks" as LinieLinks
+state "LinieRechts" as LinieRechts
+state "LinieVerloren" as LinieVerloren
+
+LinieZentriert --> LinieLinks      : c_front != black \n and c_left == black
+LinieZentriert --> LinieRechts     : c_front != black \n and c_right == black
+LinieZentriert --> LinieVerloren   : c_front != black \n and c_left != black \n and c_right != black
+
+LinieLinks --> LinieZentriert      : c_front == black
+LinieLinks --> LinieLinks          : c_front != black \n and c_left == black
+LinieLinks --> LinieVerloren       : c_front != black \n and c_left != black
+
+LinieRechts --> LinieZentriert     : c_front == black
+LinieRechts --> LinieRechts        : c_front != black \n and c_right == black
+LinieRechts --> LinieVerloren      : c_front != black \n and c_right != black
+
+LinieVerloren --> LinieLinks       : c_left == black
+LinieVerloren --> LinieRechts      : c_right == black
+LinieVerloren --> LinieZentriert   : c_front == black
+LinieVerloren --> LinieVerloren    : sonst
+
+@enduml
