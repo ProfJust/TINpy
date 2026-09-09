@@ -1,0 +1,22 @@
+@startuml
+title EVA-Modell – Beispiel Roboter stoppt vor Hindernis
+
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam rectangle {
+    RoundCorner 15
+}
+
+rectangle "EINGABE <<Sensor einlesen>>\nAbstandssensor aktueller Wert: 15 cm" as Input
+
+rectangle "VERARBEITUNG <<Python-Programm>>\n\nif abstand < 20:   \n   stop_Robot()" as Processing
+
+rectangle "AUSGABE <<Aktor>>\nMotor STOP" as Output
+
+Input --> Processing : Messwert Abstandssensor
+Processing --> Output : Steuerbefehl Motor
+
+' Rücksprung als Endlosschleife
+Output -up-> Input : Endlosschleife\nnächster Zyklus
+
+@enduml
