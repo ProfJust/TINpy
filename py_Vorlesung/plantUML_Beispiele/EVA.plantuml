@@ -1,0 +1,14 @@
+@startuml
+start
+
+:<<Eingabe>>
+Daten erfassen;
+
+:<<Verarbeitung>>
+Daten verarbeiten;
+
+:<<Ausgabe>>
+Ergebnis ausgeben;
+
+stop
+@enduml
