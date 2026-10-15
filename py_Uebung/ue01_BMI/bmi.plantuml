@@ -18,8 +18,8 @@ skinparam activity {
 start
 
 :myBMI = 0
-BMImin = 0
-BMImax = 0;
+BMImin = 18.5
+BMImax = 25.0;
 
 :Eingabe:
 Masse in kg
