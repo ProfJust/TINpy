@@ -68,5 +68,3 @@ bmi = verarbeitung(masse_kg, groesse_m, alter_y)
 ausgabe(bmi)
 
 print("ENDE")
-
-
