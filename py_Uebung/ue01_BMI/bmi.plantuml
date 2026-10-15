@@ -1,0 +1,50 @@
+@startuml
+
+title BMI-Berechnung und Bewertung
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam ArrowColor black
+skinparam activity {
+    BackgroundColor lightgrey
+    BorderColor black
+    DiamondBackgroundColor white
+    DiamondBorderColor black
+    FontColor black
+}
+
+start
+
+:myBMI = 0
+BMImin = 0
+BMImax = 0;
+
+:Eingabe:
+Masse in kg
+Groesse in m
+Alter in Jahren;
+
+:myBMI = Masse / (Groesse * Groesse);
+
+:Bestimme BMImin und BMImax
+in Abhängigkeit vom Alter
+(anhand einer Tabelle);
+
+if (myBMI < BMImin?) then (Ja)
+    :Ausgabe: "Zu dünn";
+else (Nein)
+    if (myBMI > BMImax?) then (Ja)
+        :Ausgabe: "Zu dick";
+    else (Nein)
+        :Ausgabe: "Normal";
+    endif
+endif
+
+stop
+
+@enduml
+
+' Set Cursor between @startuml and @enduml
+' and use ALT + D to show diagramm

@@ -1,0 +1,25 @@
+@startuml
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontSize 16
+
+(*) --> "BMI berechnen"
+--> "BMImin und BMImax bestimmen"
+
+if "myBMI < BMImin?" then
+    -right-> [Ja] "Ausgabe: Zu dünn"
+    --> (*)
+else
+    -down-> [Nein] ===B1===
+endif
+
+===B1=== --> if "myBMI > BMImax?" then
+    -right-> [Ja] "Ausgabe: Zu dick"
+    --> (*)
+else
+    -down-> [Nein] "Ausgabe: Normal"
+    --> (*)
+endif
+
+@enduml
