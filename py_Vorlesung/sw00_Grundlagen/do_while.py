@@ -1,4 +1,4 @@
-# Ersatz für eine do...while-Schleife
+# Ersatz für eine  do...while-Schleife
 
 cntr = 12
 while True:  # Prüfung der Kopfbedingung ausschalten => do
