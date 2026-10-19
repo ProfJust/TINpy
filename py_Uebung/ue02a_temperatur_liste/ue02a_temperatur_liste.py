@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
-# ggf. > pip install matplotlib
+# ggf. > pip install matplotlib  
+# oder python -m pip install matplotlib
 
 
 temperaturen = [22, 24, 27, 31, 36, 42, 47, 51, 54, 56]
