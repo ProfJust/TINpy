@@ -1,4 +1,3 @@
-
 # Ersatz für eine do...while-Schleife
 
 cntr = 12
