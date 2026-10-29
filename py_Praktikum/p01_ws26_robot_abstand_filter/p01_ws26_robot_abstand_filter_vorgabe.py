@@ -15,6 +15,7 @@ def roboter_steuerung(sensor_liste):
     print("Anzahl STOPP:", anzahl_stopp)
     return anzahl_stopp
 
+
 def mittelwert3(liste):
     gefilterte_liste = []
     # HIER FOR SCHLEIFE EINFÜGEN #

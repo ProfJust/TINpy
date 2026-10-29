@@ -7,5 +7,4 @@ t.left(90)       # Dreht die Schildkröte um 90 Grad nach links
 t.color('red')
 t.circle(50)     # Zeichnet einen Kreis mit Radius 50 Pixel
 
-#t.done()         # Fenster offen halten
-input()
+turtle.done()         # Fenster offen halten

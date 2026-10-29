@@ -29,9 +29,9 @@
 # print(list_fahr)
 
 def berechne_strecke(geschwindigkeit, zeit):
-    s = geschwindigkeit * zeit  # s=v*t
-    ausgabe_strecke(s)  # Aufruf der Funktion
-    return s
+    strecke = geschwindigkeit * zeit  # s=v*t
+    ausgabe_strecke(strecke)  # Aufruf der Funktion
+    return strecke
 
 
 def ausgabe_strecke(strecke):   # Definition
