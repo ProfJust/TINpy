@@ -1,8 +1,11 @@
 
 class Roboter:  # Definiert die Klasse
-
+    anzahl = 0   # Klassenvariable
     # Initialisierungsmethode, wird beim Erzeugen eines Objekts aufgerufen
     def __init__(self, name):
+        # Nicht so anzahl += 1
+        # Greifen Sie über den Klassennamen auf die Klassenvariable zu
+        Roboter.anzahl += 1
         self.name = name        # self => Referenz auf das aktuelle Objekt
         self.geschwindigkeit = 0  # Attribut des Objekts
 
@@ -17,10 +20,11 @@ class Roboter:  # Definiert die Klasse
 
 # Zwei Objekte erzeugen
 roboter1 = Roboter("TurtleBot3")
+print(Roboter.anzahl)
 roboter2 = Roboter("Alvik")
+print(Roboter.anzahl)
 
 # Ruft eine Methode auf
 roboter1.fahren(0.2)
 roboter2.fahren(0.1)
-
 roboter1.stoppen()
