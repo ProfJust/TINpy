@@ -1,0 +1,16 @@
+
+@startuml
+skinparam backgroundColor white
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+class Roboter {
+    + abstand : float
+    + geschwindigkeit : float
+    --
+    + fahren(v : float) : None
+    + stoppen() : None
+    + abstand_ermitteln() : float
+}
+
+@enduml
