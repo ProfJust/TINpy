@@ -30,7 +30,7 @@ if __name__ == '__main__':
         print(f" Abstand: {abstand}")
         # Ruft eine Methode der Klasse auf
         if abstand > 10:
-            roboter1.fahren(3.1)
+            roboter1.fahren(1.1)
         else:
             roboter1.stoppen()
             break  # Ende der Schleife
