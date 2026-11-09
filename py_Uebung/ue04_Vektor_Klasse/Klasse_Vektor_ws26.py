@@ -36,8 +36,8 @@ class Vektor:
     
     def __mod__(self, other):
         return self.kreuzprodukt(other)
-    
-   
+
+
 # --- Testprogramm der Klasse
 if __name__ == "__main__":
     a = Vektor("A", 1, 2, 3)
