@@ -25,11 +25,11 @@ class Vektor:
 
     def kreuzprodukt(self, other):
         # Zeilenumbruch mit () Klammern
-        erg_vektor = ([self.werte[1] * other.werte[2] 
+        erg_vektor = ([self.werte[1] * other.werte[2]
                       - self.werte[2] * other.werte[1],
-                      self.werte[2] * other.werte[0] 
+                      self.werte[2] * other.werte[0]
                       - self.werte[0] * other.werte[2],
-                      self.werte[0] * other.werte[1] 
+                      self.werte[0] * other.werte[1]
                       - self.werte[1] * other.werte[0]]
                       )
         return erg_vektor
