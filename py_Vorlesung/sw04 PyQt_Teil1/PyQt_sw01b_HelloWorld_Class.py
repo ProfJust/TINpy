@@ -1,10 +1,11 @@
 # pyQt6_02_hello_world_class.py
 # Hello World im OO-Style
-#------------------------------------------------------------------
+# ------------------------------------------------------------------
 import sys
 from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtWidgets import QMainWindow, QLabel, QGridLayout, QWidget
 from PyQt6.QtCore import QSize    
+
 
 class HelloWindow(QMainWindow):
     def __init__(self):  # Konstruktor
@@ -23,6 +24,7 @@ class HelloWindow(QMainWindow):
         label = QLabel("Hello World from PyQt6", self)
         label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         gridLayout.addWidget(label, 0, 0)
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
