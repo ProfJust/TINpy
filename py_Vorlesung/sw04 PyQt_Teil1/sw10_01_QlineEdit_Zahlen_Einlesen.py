@@ -49,17 +49,17 @@ class MeinFenster(QWidget):
         # ausgabe() wird beim Drücken der Enter-Taste ausgeführt.
         self.eingabe.returnPressed.connect(self.ausgabe)  
         
-    def ausgabe(self):
-        #     v = float(self.eingabe.text())
-        v = self.eingabe2.value()
-        self.label.setText(f"Geschwindigkeit: {v:.2f} m/s ")
-
     # def ausgabe(self):
-        # if self.eingabe.hasAcceptableInput():
-        #     v = float(self.eingabe.text())
-        #     self.label.setText( f"Geschwindigkeit: {v:.2f} m/s"  )
-        # else:
-        #     self.label.setText("Ungültige Eingabe! Erlaubt: 0.0 bis 1.0"  )
+    #     #     v = float(self.eingabe.text())
+    #     v = self.eingabe2.value()
+    #     self.label.setText(f"Geschwindigkeit: {v:.2f} m/s ")
+
+    def ausgabe(self):
+        if self.eingabe.hasAcceptableInput():
+            v = float(self.eingabe.text())
+            self.label.setText( f"Geschwindigkeit: {v:.2f} m/s"  )
+        else:
+            self.label.setText("Ungültige Eingabe! Erlaubt: 0.0 bis 1.0"  )
         
     
 
