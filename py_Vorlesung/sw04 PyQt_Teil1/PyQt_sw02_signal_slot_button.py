@@ -1,8 +1,8 @@
-#-------------------------------------------------------------------
+# -------------------------------------------------------------------
 # Dieser Code erstellt mit PyQt6 ein einfaches GUI-Fenster mit einem Button, 
 # der beim Anklicken eine Meldung in der Konsole ausgibt.
 # OJ 29.09.2025
-#-------------------------------------------------------------------
+# -------------------------------------------------------------------
 
 # sys wird verwendet, um Programm-Argumente zu verarbeiten und das Programm später zu beenden
 import sys
@@ -38,6 +38,7 @@ class MainWindow(QMainWindow): # Leitet eine benutzerdefinierte Fensterklasse Ma
     def clickSlot(self):
         # Die Methode clickSlot(self) wird durch das Klick-Ereignis des Buttons ausgelöst 
         print('Clicked Pyqt button.') # gibt den Text „Clicked Pyqt button.“ auf der Konsole aus.
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)  # eine Anwendung wird erzeugt

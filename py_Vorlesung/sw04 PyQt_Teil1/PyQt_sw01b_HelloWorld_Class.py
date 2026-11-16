@@ -4,7 +4,7 @@
 import sys
 from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtWidgets import QMainWindow, QLabel, QGridLayout, QWidget
-from PyQt6.QtCore import QSize    
+from PyQt6.QtCore import QSize 
 
 
 class HelloWindow(QMainWindow):
@@ -30,4 +30,4 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     mainWin = HelloWindow()  # Instanz der Klasse bilden
     mainWin.show()
-    sys.exit( app.exec() )
+    sys.exit(app.exec())

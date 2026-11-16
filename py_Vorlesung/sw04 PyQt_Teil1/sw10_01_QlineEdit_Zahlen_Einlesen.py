@@ -7,6 +7,7 @@ from PyQt6.QtWidgets import (
 
 from PyQt6.QtGui import QDoubleValidator
 from PyQt6.QtWidgets import QDoubleSpinBox
+from PyQt6.QtCore import QLocale
 
 
 
@@ -18,15 +19,18 @@ class MeinFenster(QWidget):
 
         # Layout erzeugen
         layout = QVBoxLayout()
+        locale = QLocale(QLocale.Language.English)  # . statt ,
 
         # Eingabefeld erzeugen
         self.eingabe = QLineEdit()
         self.eingabe.setPlaceholderText("Zahl eingeben")
         # Zahlen zwischen 0.0 und 1.0 erlauben
-        validator = QDoubleValidator(0.0, 1.0, 2)
+        validator = QDoubleValidator(0.0, 1.0, 3)
+        validator.setLocale(locale)  # . statt ,
         self.eingabe.setValidator(validator)
 
         self.eingabe2 = QDoubleSpinBox()
+        self.eingabe2.setLocale(locale)
         self.eingabe2.setRange(0.0, 1.0)
         self.eingabe2.setDecimals(2)
         self.eingabe2.setSingleStep(0.05)
@@ -57,7 +61,7 @@ class MeinFenster(QWidget):
     def ausgabe(self):
         if self.eingabe.hasAcceptableInput():
             v = float(self.eingabe.text())
-            self.label.setText( f"Geschwindigkeit: {v:.2f} m/s"  )
+            self.label.setText(f"Geschwindigkeit: {v:.2f} m/s"  )
         else:
             self.label.setText("Ungültige Eingabe! Erlaubt: 0.0 bis 1.0"  )
         
