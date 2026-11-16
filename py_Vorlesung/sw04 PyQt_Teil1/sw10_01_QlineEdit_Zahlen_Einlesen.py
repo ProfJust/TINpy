@@ -26,6 +26,7 @@ class MeinFenster(QWidget):
         self.eingabe.setPlaceholderText("Zahl eingeben")
         # Zahlen zwischen 0.0 und 1.0 erlauben
         validator = QDoubleValidator(0.0, 1.0, 3)
+        # von, bis, maximal erlaubte Anzahl der Nachkommastellen 3
         validator.setLocale(locale)  # . statt ,
         self.eingabe.setValidator(validator)
 
