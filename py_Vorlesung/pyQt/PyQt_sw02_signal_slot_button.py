@@ -33,7 +33,7 @@ class MainWindow(QMainWindow): # Leitet eine benutzerdefinierte Fensterklasse Ma
         # Der Button wird auf die Größe 100x32 Pixel gesetzt 
         pybutton.resize(100,32)
         # ..und bei x=50, y=50 im Fenster positioniert.
-        pybutton.move(50, 50)        
+        pybutton.move(50, 100)        
 
     def clickSlot(self):
         # Die Methode clickSlot(self) wird durch das Klick-Ereignis des Buttons ausgelöst 
