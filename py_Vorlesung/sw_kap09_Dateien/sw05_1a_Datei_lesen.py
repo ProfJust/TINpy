@@ -4,6 +4,7 @@ import os
 # nicht unbedingt im Ordner des Skripts.
 # ==> In den Arbeitsordner wechseln 
 script_dir = os.path.dirname(os.path.abspath(__file__))
+print(script_dir)
 os.chdir(script_dir)
 
 with open("ingenieurlied.txt", "r") as f:
