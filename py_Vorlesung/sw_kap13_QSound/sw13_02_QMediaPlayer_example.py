@@ -21,14 +21,14 @@ class MeinFenster(QWidget):
         # MediaPlayer
         self.player = QMediaPlayer()
         self.player.setAudioOutput(self.audio)
-        #self.player.setSource(QUrl.fromLocalFile("sound.wav"))
+        # self.player.setSource(QUrl.fromLocalFile("sound.wav"))
         # Freies Audiofile
         # https://pixabay.com/de/sound-effects/musical-timbo-drumline-loop-103bpm-171091/
         self.player.setSource(
                 QUrl.fromLocalFile(
-                r"C:\Users\ProfJust\myRoboSciebo\_TINpy\Tinpy - Skript\kamhunt-timbo-drumline-loop-103bpm-171091.mp3"
+                    r"C:\sciebo_robotik\_TINpy\_git_WS26_nov\TINpy\py_Vorlesung\sw_kap13_QSound\kamhunt-timbo-drumline-loop-103bpm-171091.mp3"
+                )
         )
-)
 
         # Buttons
         layout = QVBoxLayout(self)
