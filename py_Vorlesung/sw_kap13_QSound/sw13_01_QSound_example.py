@@ -17,7 +17,7 @@ class MeinFenster(QWidget):
         ordner = Path(__file__).resolve().parent
 
         # WAV-Datei im gleichen Verzeichnis
-        datei = ordner / "yeah.wav"
+        datei = ordner / "my_yeah.wav"
 
         print("Datei:", datei)
         print("Existiert:", datei.is_file())
