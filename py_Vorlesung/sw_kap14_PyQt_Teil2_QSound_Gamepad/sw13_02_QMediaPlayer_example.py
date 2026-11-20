@@ -26,7 +26,7 @@ class MeinFenster(QWidget):
         # https://pixabay.com/de/sound-effects/musical-timbo-drumline-loop-103bpm-171091/
         self.player.setSource(
                 QUrl.fromLocalFile(
-                    r"C:\sciebo_robotik\_TINpy\_git_WS26_nov\TINpy\py_Vorlesung\sw_kap13_QSound\kamhunt-timbo-drumline-loop-103bpm-171091.mp3"
+                    r"C:\sciebo_robotik\_TINpy\_git_WS26_nov\TINpy\py_Vorlesung\sw_kap14_PyQt_Teil2_QSound_Gamepad\hallo.mp3"
                 )
         )
 
